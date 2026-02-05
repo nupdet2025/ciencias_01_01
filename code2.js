@@ -12,6 +12,9 @@ gdjs.intro3Code.GDfadeObjects3= [];
 gdjs.intro3Code.GDintro2Objects1= [];
 gdjs.intro3Code.GDintro2Objects2= [];
 gdjs.intro3Code.GDintro2Objects3= [];
+gdjs.intro3Code.GDbtn_9595replayObjects1= [];
+gdjs.intro3Code.GDbtn_9595replayObjects2= [];
+gdjs.intro3Code.GDbtn_9595replayObjects3= [];
 
 
 gdjs.intro3Code.eventsList0 = function(runtimeScene) {
@@ -62,6 +65,7 @@ gdjs.copyArray(runtimeScene.getObjects("fade"), gdjs.intro3Code.GDfadeObjects1);
 }{for(var i = 0, len = gdjs.intro3Code.GDfadeObjects1.length ;i < len;++i) {
     gdjs.intro3Code.GDfadeObjects1[i].getBehavior("Tween").addObjectOpacityTween2("fadein", 0, "linear", 0.4, false);
 }
+}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\audio_03.mp3", 2, false, 100, 1);
 }
 { //Subevents
 gdjs.intro3Code.eventsList0(runtimeScene);} //End of subevents
@@ -102,14 +106,47 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.intro3Code.mapOfGDgdjs_9546intro3Code_9546GDgoObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(19902236);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(24418740);
 }
 }
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playSound(runtimeScene, "assets\\btn_press.mp3", false, 100, 1);
 }{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "intro2", false);
+}{gdjs.evtTools.sound.fadeSoundVolume(runtimeScene, 2, 0, 0.5);
 }}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("btn_replay"), gdjs.intro3Code.GDbtn_9595replayObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.intro3Code.GDbtn_9595replayObjects1.length;i<l;++i) {
+    if ( gdjs.intro3Code.GDbtn_9595replayObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.intro3Code.GDbtn_9595replayObjects1[k] = gdjs.intro3Code.GDbtn_9595replayObjects1[i];
+        ++k;
+    }
+}
+gdjs.intro3Code.GDbtn_9595replayObjects1.length = k;
+if (isConditionTrue_0) {
+{gdjs.evtTools.sound.stopSoundOnChannel(runtimeScene, 2);
+}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\audio_03.mp3", 2, false, 100, 1);
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+{
+}
 
 }
 
@@ -131,6 +168,9 @@ gdjs.intro3Code.GDfadeObjects3.length = 0;
 gdjs.intro3Code.GDintro2Objects1.length = 0;
 gdjs.intro3Code.GDintro2Objects2.length = 0;
 gdjs.intro3Code.GDintro2Objects3.length = 0;
+gdjs.intro3Code.GDbtn_9595replayObjects1.length = 0;
+gdjs.intro3Code.GDbtn_9595replayObjects2.length = 0;
+gdjs.intro3Code.GDbtn_9595replayObjects3.length = 0;
 
 gdjs.intro3Code.eventsList1(runtimeScene);
 gdjs.intro3Code.GDgoObjects1.length = 0;
@@ -145,6 +185,9 @@ gdjs.intro3Code.GDfadeObjects3.length = 0;
 gdjs.intro3Code.GDintro2Objects1.length = 0;
 gdjs.intro3Code.GDintro2Objects2.length = 0;
 gdjs.intro3Code.GDintro2Objects3.length = 0;
+gdjs.intro3Code.GDbtn_9595replayObjects1.length = 0;
+gdjs.intro3Code.GDbtn_9595replayObjects2.length = 0;
+gdjs.intro3Code.GDbtn_9595replayObjects3.length = 0;
 
 
 return;

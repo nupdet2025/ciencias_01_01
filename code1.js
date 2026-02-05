@@ -15,6 +15,9 @@ gdjs.intro2Code.GDNewSprite2Objects3= [];
 gdjs.intro2Code.GDbtn_9595playObjects1= [];
 gdjs.intro2Code.GDbtn_9595playObjects2= [];
 gdjs.intro2Code.GDbtn_9595playObjects3= [];
+gdjs.intro2Code.GDbtn_9595replayObjects1= [];
+gdjs.intro2Code.GDbtn_9595replayObjects2= [];
+gdjs.intro2Code.GDbtn_9595replayObjects3= [];
 
 
 gdjs.intro2Code.eventsList0 = function(runtimeScene) {
@@ -57,7 +60,7 @@ isConditionTrue_1 = !(gdjs.evtTools.sound.isMusicOnChannelPlaying(runtimeScene, 
 isConditionTrue_0 = isConditionTrue_1;
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\Animation-Adventure-Wonderpark.mp3", 1, false, 70, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\Animation-Adventure-Wonderpark.mp3", 1, false, 10, 1);
 }}
 
 }
@@ -78,7 +81,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.intro2Code.mapOfGDgdjs_9546intro2Code_9546GDbtn_95959595playObjects1Objects = Hashtable.newFrom({"btn_play": gdjs.intro2Code.GDbtn_9595playObjects1});
-gdjs.intro2Code.asyncCallback19066356 = function (runtimeScene, asyncObjectsList) {
+gdjs.intro2Code.asyncCallback24166196 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.intro2Code.localVariables);
 {gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, 1);
 }{runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(2);
@@ -94,7 +97,7 @@ gdjs.intro2Code.eventsList1 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.intro2Code.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.intro2Code.asyncCallback19066356(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.intro2Code.asyncCallback24166196(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -118,6 +121,7 @@ gdjs.copyArray(runtimeScene.getObjects("fade"), gdjs.intro2Code.GDfadeObjects1);
 }{for(var i = 0, len = gdjs.intro2Code.GDfadeObjects1.length ;i < len;++i) {
     gdjs.intro2Code.GDfadeObjects1[i].getBehavior("Tween").addObjectOpacityTween2("fadein", 0, "linear", 0.4, false);
 }
+}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\audio_02.mp3", 2, false, 100, 1);
 }
 { //Subevents
 gdjs.intro2Code.eventsList0(runtimeScene);} //End of subevents
@@ -158,16 +162,49 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.intro2Code.mapOfGDgdjs_9546intro2Code_9546GDbtn_95959595playObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(19063924);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(24164532);
 }
 }
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playSound(runtimeScene, "assets\\btn_press.mp3", false, 100, 1);
+}{gdjs.evtTools.sound.fadeSoundVolume(runtimeScene, 2, 0, 0.5);
 }{gdjs.evtTools.sound.fadeMusicVolume(runtimeScene, 1, 0, 0.5);
 }
 { //Subevents
 gdjs.intro2Code.eventsList1(runtimeScene);} //End of subevents
+}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("btn_replay"), gdjs.intro2Code.GDbtn_9595replayObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.intro2Code.GDbtn_9595replayObjects1.length;i<l;++i) {
+    if ( gdjs.intro2Code.GDbtn_9595replayObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.intro2Code.GDbtn_9595replayObjects1[k] = gdjs.intro2Code.GDbtn_9595replayObjects1[i];
+        ++k;
+    }
+}
+gdjs.intro2Code.GDbtn_9595replayObjects1.length = k;
+if (isConditionTrue_0) {
+{gdjs.evtTools.sound.stopSoundOnChannel(runtimeScene, 2);
+}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\audio_02.mp3", 2, false, 100, 1);
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+{
 }
 
 }
@@ -193,6 +230,9 @@ gdjs.intro2Code.GDNewSprite2Objects3.length = 0;
 gdjs.intro2Code.GDbtn_9595playObjects1.length = 0;
 gdjs.intro2Code.GDbtn_9595playObjects2.length = 0;
 gdjs.intro2Code.GDbtn_9595playObjects3.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects1.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects2.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects3.length = 0;
 
 gdjs.intro2Code.eventsList2(runtimeScene);
 gdjs.intro2Code.GDcursorObjects1.length = 0;
@@ -210,6 +250,9 @@ gdjs.intro2Code.GDNewSprite2Objects3.length = 0;
 gdjs.intro2Code.GDbtn_9595playObjects1.length = 0;
 gdjs.intro2Code.GDbtn_9595playObjects2.length = 0;
 gdjs.intro2Code.GDbtn_9595playObjects3.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects1.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects2.length = 0;
+gdjs.intro2Code.GDbtn_9595replayObjects3.length = 0;
 
 
 return;

@@ -1,38 +1,31 @@
 
-if (typeof gdjs.evtsExt__CurvedMovement__PathX !== "undefined") {
-  gdjs.evtsExt__CurvedMovement__PathX.registeredGdjsCallbacks.forEach(callback =>
+if (typeof gdjs.evtsExt__PanelSpriteButton__IsInGameEdition !== "undefined") {
+  gdjs.evtsExt__PanelSpriteButton__IsInGameEdition.registeredGdjsCallbacks.forEach(callback =>
     gdjs._unregisterCallback(callback)
   );
 }
 
-gdjs.evtsExt__CurvedMovement__PathX = {};
+gdjs.evtsExt__PanelSpriteButton__IsInGameEdition = {};
 
 
-gdjs.evtsExt__CurvedMovement__PathX.userFunc0x1550a10 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PanelSpriteButton__IsInGameEdition.userFunc0xb798d8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
-const pathName = eventsFunctionContext.getArgument("PathName");
-/** @type {Map<string, gdjs.__curvedMovementExtension.CurvedPath>} */
-const curvedPaths = runtimeScene.__curvedMovementExtension.curvedPaths;
-const curvedPath = curvedPaths.get(pathName);
-
-const length = eventsFunctionContext.getArgument("Length");
-
-eventsFunctionContext.returnValue = curvedPath ? curvedPath.getX(length) : 0;
-
+const game = runtimeScene.getGame();
+eventsFunctionContext.returnValue = game.isInGameEdition && game.isInGameEdition();
 };
-gdjs.evtsExt__CurvedMovement__PathX.eventsList0 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PanelSpriteButton__IsInGameEdition.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
-gdjs.evtsExt__CurvedMovement__PathX.userFunc0x1550a10(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__PanelSpriteButton__IsInGameEdition.userFunc0xb798d8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
 
 };
 
-gdjs.evtsExt__CurvedMovement__PathX.func = function(runtimeScene, PathName, Length, parentEventsFunctionContext) {
+gdjs.evtsExt__PanelSpriteButton__IsInGameEdition.func = function(runtimeScene, parentEventsFunctionContext) {
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -40,8 +33,8 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
-  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("CurvedMovement"),
-  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("CurvedMovement"),
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("PanelSpriteButton"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("PanelSpriteButton"),
   localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
@@ -80,18 +73,16 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
     return runtimeScene.getLayer(layerName);
   },
   getArgument: function(argName) {
-if (argName === "PathName") return PathName;
-if (argName === "Length") return Length;
     return "";
   },
   getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
 
-gdjs.evtsExt__CurvedMovement__PathX.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__PanelSpriteButton__IsInGameEdition.eventsList0(runtimeScene, eventsFunctionContext);
 
 
-return Number(eventsFunctionContext.returnValue) || 0;
+return !!eventsFunctionContext.returnValue;
 }
 
-gdjs.evtsExt__CurvedMovement__PathX.registeredGdjsCallbacks = [];
+gdjs.evtsExt__PanelSpriteButton__IsInGameEdition.registeredGdjsCallbacks = [];

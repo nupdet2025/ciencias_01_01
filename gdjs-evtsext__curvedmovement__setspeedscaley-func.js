@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__CurvedMovement__SetSpeedScaleY !== "undefined") {
 gdjs.evtsExt__CurvedMovement__SetSpeedScaleY = {};
 
 
-gdjs.evtsExt__CurvedMovement__SetSpeedScaleY.userFunc0x9ac178 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__CurvedMovement__SetSpeedScaleY.userFunc0xfcac58 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 const pathName = eventsFunctionContext.getArgument("PathName");
 /** @type {Map<string, gdjs.__curvedMovementExtension.CurvedPath>} */
@@ -25,7 +25,7 @@ gdjs.evtsExt__CurvedMovement__SetSpeedScaleY.eventsList0 = function(runtimeScene
 {
 
 
-gdjs.evtsExt__CurvedMovement__SetSpeedScaleY.userFunc0x9ac178(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__CurvedMovement__SetSpeedScaleY.userFunc0xfcac58(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

@@ -106,7 +106,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.intro3Code.mapOfGDgdjs_9546intro3Code_9546GDgoObjects1Objects, runtimeScene, true, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(24418740);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20609708);
 }
 }
 }

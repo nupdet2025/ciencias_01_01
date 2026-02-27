@@ -44,7 +44,8 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = (runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber() == 3);
 }
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\victory.mp3", 3, true, 100, 1);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\victory.mp3", 3, true, 20, 1);
+}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\audio_final.mp3", 4, false, 100, 1);
 }}
 
 }
@@ -64,7 +65,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.finalCode.asyncCallback25588276 = function (runtimeScene, asyncObjectsList) {
+};gdjs.finalCode.asyncCallback21859276 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.finalCode.localVariables);
 
 { //Subevents
@@ -80,7 +81,7 @@ gdjs.finalCode.eventsList1 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.finalCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), (runtimeScene) => (gdjs.finalCode.asyncCallback25588276(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), (runtimeScene) => (gdjs.finalCode.asyncCallback21859276(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -88,7 +89,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), 
 
 
 };gdjs.finalCode.mapOfGDgdjs_9546finalCode_9546GDsimObjects1Objects = Hashtable.newFrom({"sim": gdjs.finalCode.GDsimObjects1});
-gdjs.finalCode.asyncCallback25591924 = function (runtimeScene, asyncObjectsList) {
+gdjs.finalCode.asyncCallback21863228 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.finalCode.localVariables);
 {gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, 3);
 }{runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(1);
@@ -104,7 +105,7 @@ gdjs.finalCode.eventsList2 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.finalCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.3), (runtimeScene) => (gdjs.finalCode.asyncCallback25591924(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.3), (runtimeScene) => (gdjs.finalCode.asyncCallback21863228(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -112,7 +113,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.3)
 
 
 };gdjs.finalCode.mapOfGDgdjs_9546finalCode_9546GDnoObjects1Objects = Hashtable.newFrom({"no": gdjs.finalCode.GDnoObjects1});
-gdjs.finalCode.userFunc0x10da880 = function GDJSInlineCode(runtimeScene) {
+gdjs.finalCode.userFunc0x17e2178 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 window.location.href = "https://sesiescolas.fiemg.com.br/";
 //window.top.location.href = "https://sesiescolas.fiemg.com.br/";
@@ -123,12 +124,12 @@ gdjs.finalCode.eventsList3 = function(runtimeScene, asyncObjectsList) {
 {
 
 
-gdjs.finalCode.userFunc0x10da880(runtimeScene);
+gdjs.finalCode.userFunc0x17e2178(runtimeScene);
 
 }
 
 
-};gdjs.finalCode.asyncCallback25593012 = function (runtimeScene, asyncObjectsList) {
+};gdjs.finalCode.asyncCallback21864508 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.finalCode.localVariables);
 {gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, 3);
 }{runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(1);
@@ -146,7 +147,7 @@ gdjs.finalCode.eventsList4 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.finalCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.3), (runtimeScene) => (gdjs.finalCode.asyncCallback25593012(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.3), (runtimeScene) => (gdjs.finalCode.asyncCallback21864508(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -220,6 +221,7 @@ isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.finalCode.mapOfGDgdj
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playSound(runtimeScene, "assets\\btn_press.mp3", false, 100, 1);
 }{gdjs.evtTools.sound.fadeSoundVolume(runtimeScene, 3, 0, 0.3);
+}{gdjs.evtTools.sound.fadeSoundVolume(runtimeScene, 4, 0, 0.3);
 }
 { //Subevents
 gdjs.finalCode.eventsList2(runtimeScene);} //End of subevents
@@ -248,6 +250,7 @@ isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.finalCode.mapOfGDgdj
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playSound(runtimeScene, "assets\\btn_press.mp3", false, 100, 1);
+}{gdjs.evtTools.sound.fadeSoundVolume(runtimeScene, 4, 0, 0.3);
 }{gdjs.evtTools.sound.fadeSoundVolume(runtimeScene, 3, 0, 0.3);
 }
 { //Subevents
